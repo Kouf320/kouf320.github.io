@@ -3,23 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio | Digital Space</title>
+    <title>Ioannis Koufos | Cybersecurity and Artificial Intelligence Researcher</title>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:italic&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #1a1c1e; /* Deep Charcoal */
-            --opal-orange: #eebf91; /* Soft Opal Orange */
+            --bg-color: #1a1c1e; 
+            --opal-orange: #eebf91; 
             --text-primary: #f0f0f0;
             --text-secondary: #adb5bd;
             --card-bg: #25282c;
             --transition: all 0.3s ease;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             background-color: var(--bg-color);
@@ -31,19 +27,14 @@
             min-height: 100vh;
         }
 
-        .wrapper {
-            max-width: 800px;
-            width: 100%;
-            padding: 60px 20px;
-        }
+        .wrapper { max-width: 850px; width: 100%; padding: 60px 20px; }
 
-        /* Navigation */
         nav {
             margin-bottom: 50px;
             display: flex;
             gap: 30px;
             border-bottom: 1px solid rgba(238, 191, 145, 0.2);
-            padding-bottom: 10px;
+            padding-bottom: 15px;
         }
 
         nav a {
@@ -52,42 +43,27 @@
             font-size: 0.9rem;
             letter-spacing: 1px;
             text-transform: uppercase;
+            cursor: pointer;
             transition: var(--transition);
         }
 
-        nav a:hover, nav a.active {
-            color: var(--opal-orange);
-        }
+        nav a:hover, nav a.active { color: var(--opal-orange); }
 
-        /* Branding */
-        header {
-            margin-bottom: 60px;
-        }
+        header { margin-bottom: 60px; }
 
         h1 {
-            font-family: 'Libre+Baskerville', serif;
+            font-family: 'Libre Baskerville', serif;
             font-size: 2.8rem;
             font-style: italic;
             font-weight: 400;
-            margin-bottom: 10px;
             color: var(--opal-orange);
+            margin-bottom: 10px;
         }
 
-        .bio-short {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            max-width: 500px;
-        }
+        .subtitle { color: var(--text-secondary); font-size: 1.1rem; }
 
-        /* Content Sections */
-        .content-section {
-            display: none;
-            animation: fadeIn 0.6s ease;
-        }
-
-        .content-section.active {
-            display: block;
-        }
+        .content-section { display: none; animation: fadeIn 0.6s ease; }
+        .content-section.active { display: block; }
 
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
@@ -96,101 +72,127 @@
 
         h2 {
             font-size: 1.5rem;
-            margin-bottom: 25px;
+            margin: 40px 0 25px 0;
             border-left: 3px solid var(--opal-orange);
             padding-left: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        /* CV Specific Styling */
         .cv-item {
             margin-bottom: 30px;
-            padding: 20px;
+            padding: 25px;
             background: var(--card-bg);
-            border-radius: 4px;
+            border-radius: 6px;
+            border: 1px solid rgba(255,255,255,0.03);
         }
 
-        .cv-meta {
+        .cv-meta { color: var(--opal-orange); font-size: 0.85rem; font-weight: 600; }
+        .cv-title { font-size: 1.2rem; margin: 5px 0; font-weight: 600; }
+        .cv-org { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 10px; }
+
+        .tag-container { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
+        .tag {
+            background: rgba(238, 191, 145, 0.1);
             color: var(--opal-orange);
-            font-size: 0.85rem;
-            font-weight: 600;
+            padding: 4px 12px;
+            font-size: 0.8rem;
+            border-radius: 4px;
+            border: 1px solid rgba(238, 191, 145, 0.3);
         }
 
-        .cv-title {
-            font-size: 1.2rem;
-            margin: 5px 0;
-        }
-
-        .footer {
+        footer {
             margin-top: 80px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.05);
             font-size: 0.8rem;
             color: var(--text-secondary);
             text-align: center;
         }
 
+        a.contact-link { color: var(--opal-orange); text-decoration: none; border-bottom: 1px solid; }
     </style>
 </head>
 <body>
 
     <div class="wrapper">
         <nav>
-            <a href="#" onclick="showSection('home')" class="nav-link active" id="link-home">Home</a>
-            <a href="#" onclick="showSection('cv')" class="nav-link" id="link-cv">Experience</a>
-            <a href="#" onclick="showSection('contact')" class="nav-link" id="link-contact">Contact</a>
+            <a onclick="showSection('home')" class="nav-link active" id="link-home">About</a>
+            <a onclick="showSection('cv')" class="nav-link" id="link-cv">Experience</a>
+            <a onclick="showSection('research')" class="nav-link" id="link-research">Research</a>
         </nav>
 
         <header>
-            <h1>Alex Mercer</h1>
-            <p class="bio-short">A designer and developer exploring the intersection of digital craft and human connection.</p>
+            <h1>Ioannis Koufos</h1>
+            <p class="subtitle">Cybersecurity & Artificial Intelligence Researcher</p>
         </header>
 
         <main id="home" class="content-section active">
-            <h2>Current Focus</h2>
-            <p>I spend my time building intuitive interfaces and writing about the evolution of the web. Currently based in Athens, working on decentralised design systems.</p>
-            <br>
-            <p>In this space, I share my thoughts, project logs, and various digital experiments. I believe in minimalism, accessibility, and the beauty of opal-toned aesthetics.</p>
+            <h2>The Profile</h2>
+            <p>I am a Ph.D. candidate at the Athens University of Economics and Business, specializing in the cybersecurity of digital and critical infrastructures. My work bridges the gap between deep reinforcement learning and complex system defense.</p>
+            <p style="margin-top: 15px;">Currently, I serve as an Associate Researcher at NCSR "Demokritos," contributing to large-scale European projects in smart network security and intrusion response.</p>
+            
+            <h2>Core Expertise</h2>
+            <div class="tag-container">
+                <span class="tag">Moving Target Defense</span>
+                <span class="tag">Deep Reinforcement Learning</span>
+                <span class="tag">5G/B5G Security</span>
+                <span class="tag">Digital Twins</span>
+                <span class="tag">Game Theory</span>
+            </div>
         </main>
 
         <main id="cv" class="content-section">
             <h2>Professional Journey</h2>
             
             <div class="cv-item">
-                <span class="cv-meta">2023 — Present</span>
-                <p class="cv-title">Senior Product Designer</p>
-                <p style="color: var(--text-secondary);">Leading the creative direction for next-gen user interfaces and design systems.</p>
+                <span class="cv-meta">NOV 2025 — PRESENT</span>
+                <p class="cv-title">CITADEL RANGE</p>
+                <p class="cv-org">NCSR "Demokritos"</p>
+                <p style="color: var(--text-secondary);">Leading cyber infrastructure training for advanced defense exercises under the European Defence Fund.</p>
             </div>
 
             <div class="cv-item">
-                <span class="cv-meta">2020 — 2023</span>
-                <p class="cv-title">Frontend Developer</p>
-                <p style="color: var(--text-secondary);">Specialized in React-based architectures and performance optimization.</p>
+                <span class="cv-meta">DEC 2023 — PRESENT</span>
+                <p class="cv-title">COBALT Project</p>
+                <p class="cv-org">NCSR "Demokritos"</p>
+                <p style="color: var(--text-secondary);">Focusing on decentralized digital twinning for EU ICT cybersecurity certification[cite: 17, 18].</p>
+            </div>
+
+            <h2>Education</h2>
+            <div class="cv-item">
+                <span class="cv-meta">2024 — ONGOING</span>
+                <p class="cv-title">Ph.D. in Cybersecurity</p>
+                <p class="cv-org">Athens University of Economics and Business</p>
             </div>
         </main>
 
-        <main id="contact" class="content-section">
-            <h2>Get in Touch</h2>
-            <p>If you'd like to collaborate or just say hello, feel free to reach out via email.</p>
-            <p style="margin-top: 20px;">
-                <a href="mailto:hello@alexmercer.com" style="color: var(--opal-orange); text-decoration: none; border-bottom: 1px solid;">hello@alexmercer.com</a>
-            </p>
+        <main id="research" class="content-section">
+            <h2>Selected Publications</h2>
+            
+            <div class="cv-item">
+                <span class="cv-meta">IEEE Access, 2025</span>
+                <p class="cv-title">5G/6G Architecture Evolution for XR and Metaverse</p>
+                <p style="color: var(--text-secondary);">A feasibility study on security and privacy challenges for smart culture applications.</p>
+            </div>
+
+            <div class="cv-item">
+                <span class="cv-meta">Journal of Systems Architecture, 2022</span>
+                <p class="cv-title">IDERES: Intrusion Detection and Response System</p>
+                <p style="color: var(--text-secondary);">Leveraging machine learning and attack graphs for resilient systems[cite: 67].</p>
+            </div>
         </main>
 
-        <footer class="footer">
-            &copy; 2026 — Crafted with Opal & Charcoal
+        <footer>
+            <p>Connect: <a href="mailto:johnkouf320@gmail.com" class="contact-link">johnkouf320@gmail.com</a> | Athens, Greece [cite: 3]</p>
+            <p style="margin-top: 10px;">&copy; 2026 Ioannis Koufos</p>
         </footer>
     </div>
 
     <script>
         function showSection(sectionId) {
-            // Hide all sections
-            document.querySelectorAll('.content-section').forEach(section => {
-                section.classList.remove('active');
-            });
-            // Remove active class from links
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.classList.remove('active');
-            });
-            
-            // Show selected section
+            document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
             document.getElementById(sectionId).classList.add('active');
             document.getElementById('link-' + sectionId).classList.add('active');
         }
