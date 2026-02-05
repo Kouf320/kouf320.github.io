@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications | Ioannis Koufos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:italic&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #1a1c1e; 
+            --opal-orange: #eebf91; 
+            --text-primary: #f0f0f0;
+            --text-secondary: #adb5bd;
+            --card-bg: #25282c;
+            --transition: all 0.3s ease;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: 'Outfit', sans-serif;
+            line-height: 1.7;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .wrapper { max-width: 850px; width: 100%; padding: 60px 20px; }
+
+        nav {
+            margin-bottom: 50px;
+            display: flex;
+            gap: 30px;
+            border-bottom: 1px solid rgba(238, 191, 145, 0.2);
+            padding-bottom: 15px;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        nav a:hover, nav a.active { color: var(--opal-orange); }
+
+        header { margin-bottom: 60px; }
+
+        h1 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2.5rem;
+            font-style: italic;
+            font-weight: 400;
+            color: var(--opal-orange);
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin: 40px 0 25px 0;
+            border-left: 3px solid var(--opal-orange);
+            padding-left: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .pub-category { margin-bottom: 40px; }
+
+        .pub-item {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .pub-item:last-child { border-bottom: none; }
+
+        .pub-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 5px;
+        }
+
+        .pub-authors {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+        }
+
+        .pub-venue {
+            color: var(--opal-orange);
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: var(--opal-orange);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        
+        .back-link:hover { text-decoration: underline; }
+
+        footer {
+            margin-top: 80px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="publications.html" class="active">Publications</a>
+        </nav>
+
+        <header>
+            <h1>Publications & Research</h1>
+        </header>
+
+        <main>
+            <section class="pub-category">
+                <h2>Journal Papers</h2>
+                <div class="pub-item">
+                    <div class="pub-title">5G/6G Architecture Evolution for XR and Metaverse: Feasibility Study, Security, and Privacy Challenges for Smart Culture Applications</div>
+                    <div class="pub-authors">M. Christopoulou, I. Koufos, G. Xilouris and N. Dimitriou</div>
+                    <div class="pub-venue">IEEE Access, vol. 13, pp. 103077-103094, 2025. doi: 10.1109/ACCESS.2025.3570595</div>
+                </div>
+                <div class="pub-item">
+                    <div class="pub-title">IDERES: Intrusion detection and response system using machine learning and attack graphs</div>
+                    <div class="pub-authors">Joseph R. Rose, Matthew Swann, Konstantinos P. Grammatikakis, Ioannis Koufos, Gueltoum Bendiab, Stavros Shiaeles, Nicholas Kolokotronis</div>
+                    <div class="pub-venue">Journal of Systems Architecture, Volume 131, 2022.</div>
+                </div>
+            </section>
+
+            <section class="pub-category">
+                <h2>Conference Papers</h2>
+                <div class="pub-item">
+                    <div class="pub-title">Network Architectures and Technologies for Smart Culture Applications</div>
+                    <div class="pub-authors">N. Dimitriou, M. Christopoulou, I. Koufos, L. Arnellou, A. Gradou and I. Papoutsi</div>
+                    <div class="pub-venue">2025 8th International Balkan Conference on Communications and Networking (BalkanCom), 2025.</div>
+                </div>
+                <div class="pub-item">
+                    <div class="pub-title">Adaptive Post-Quantum Cryptography for Blockchain: Enhancing Security and Energy Efficiency with Cryptographic Agility</div>
+                    <div class="pub-authors">M.-A. Kourtis et al.</div>
+                    <div class="pub-venue">2025 6th International Conference in Electronic Engineering & Information Technology (EEITE), 2025.</div>
+                </div>
+                <div class="pub-item">
+                    <div class="pub-title">Leveraging Digital Twin-as-a-Service Towards Continuous and Automated Cybersecurity Certification</div>
+                    <div class="pub-authors">I. Koufos et al.</div>
+                    <div class="pub-venue">2025 6th International Conference in Electronic Engineering & Information Technology (EEITE), 2025.</div>
+                </div>
+                <div class="pub-item">
+                    <div class="pub-title">User Terminals as Attackers: An Open Dataset Analysis of DDoS Attacks in 5G Networks</div>
+                    <div class="pub-authors">Christopoulou M., Garos A., Vekraki A., Santorinaios D., Koufos I, Karamitsiani S., Xilouris G., Kourtis M-A, Gardikis G. and Trakadas P.</div>
+                    <div class="pub-venue">2024 IEEE Conference on Standards for Communications and Networking (CSCN), 2024.</div>
+                </div>
+                <div class="pub-item">
+                    <div class="pub-title">A Comprehensive State-of-the-Art Review for Digital Twin: Cybersecurity Perspectives and Open Challenges</div>
+                    <div class="pub-authors">Jaber, A., Koufos, I., Christopoulou, M.</div>
+                    <div class="pub-venue">3PGCIC 2024. Lecture Notes on Data Engineering and Communications Technologies, vol 232. Springer, Cham.</div>
+                </div>
+                <div class="pub-item">
+                    <div class="pub-title">Towards the Automation of Attack Graph-Based Risk Assessment with DSCAI</div>
+                    <div class="pub-authors">Koufos, I., Christopoulou, M., Xilouris, G., Kourtis, MA., Souvalioti, M., Trakadas, P.</div>
+                    <div class="pub-venue">DCAI 2024. Lecture Notes in Networks and Systems, vol 1198. Springer, Cham.</div>
+                </div>
+                <div class="pub-item">
+                    <div class="pub-title">Leveraging Self-sovereign Identity for e-Health Applications</div>
+                    <div class="pub-authors">Faran, A. et al.</div>
+                    <div class="pub-venue">DCAI 2024. Lecture Notes in Networks and Systems, vol 1198. Springer, Cham.</div>
+                </div>
+                <div class="pub-item">
+                    <div class="pub-title">OASEES: Leveraging DAO-Based Programmable Swarms for Optimized Edge-to-Cloud Data Processing</div>
+                    <div class="pub-authors">Kourtis, M.A. et al.</div>
+                    <div class="pub-venue">DCAI 2024. Lecture Notes in Networks and Systems, vol 1198. Springer, Cham.</div>
+                </div>
+                <div class="pub-item">
+                    <div class="pub-title">A Collaborative Intelligent Intrusion Response Framework for Smart Electrical Power and Energy Systems</div>
+                    <div class="pub-authors">Konstantinos-Panagiotis Grammatikakis, Ioannis Koufos, and Nicholas Kolokotronis</div>
+                    <div class="pub-venue">ARES '22. Association for Computing Machinery, New York, NY, USA.</div>
+                </div>
+                <div class="pub-item">
+                    <div class="pub-title">Understanding and Mitigating Banking Trojans: From Zeus to Emotet</div>
+                    <div class="pub-authors">K. P. Grammatikakis, I. Koufos, N. Kolokotronis, C. Vassilakis and S. Shiaeles</div>
+                    <div class="pub-venue">2021 IEEE International Conference on Cyber Security and Resilience (CSR), 2021.</div>
+                </div>
+                <div class="pub-item">
+                    <div class="pub-title">Advanced metering infrastructures: security risks and mitigation</div>
+                    <div class="pub-authors">G. Bendiab, K-P. Grammatikakis, I. Koufos, N. Kolokotronis, and S. Shiaeles</div>
+                    <div class="pub-venue">Proc. 15th Int'l Conf. on Availability, Reliability and Security (ARES 2020).</div>
+                </div>
+            </section>
+
+            <section class="pub-category">
+                <h2>Book Chapters</h2>
+                <div class="pub-item">
+                    <div class="pub-title">Dynamic risk management</div>
+                    <div class="pub-authors">I. Koufos, N. Kolokotronis, K. Limniotis</div>
+                    <div class="pub-venue">Cyber-security Threats, Actors, and Dynamic Mitigation, CRC Press, 2020.</div>
+                </div>
+                <div class="pub-item">
+                    <div class="pub-title">Moving-Target Defense Techniques for Mitigating Sophisticated IoT Threats</div>
+                    <div class="pub-authors">K.-P. Grammatikakis, I. Koufos, and N. Kolokotronis</div>
+                    <div class="pub-venue">Security Technologies and Methods for Advanced Cyber Threat Intelligence, Detection and Mitigation, now publishers, 2021.</div>
+                </div>
+            </section>
+
+            <section class="pub-category">
+                <h2>Datasets</h2>
+                <div class="pub-item">
+                    <div class="pub-title">The AInception Dataset</div>
+                    <div class="pub-authors">The AInception Consortium</div>
+                    <div class="pub-venue">Zenodo, Nov. 26, 2025. doi: 10.5281/zenodo.17659656</div>
+                </div>
+            </section>
+            
+            <section class="pub-category">
+                <h2>White Papers & Reports</h2>
+                <div class="pub-item">
+                    <div class="pub-title">AInception scenario and storylines</div>
+                    <div class="pub-authors">A. Thuy, G. Enemo, F. Mancini, et al.</div>
+                    <div class="pub-venue">AInception IT/OT Rep., Norwegian Defense Research Establishment, Oct. 24, 2025.</div>
+                </div>
+                <div class="pub-item">
+                    <div class="pub-title">Security- and Privacy-related KPIs/KVIs for 6G</div>
+                    <div class="pub-venue">PRIVATEER White Paper. Zenodo. 2024.</div>
+                </div>
+            </section>
+
+             <section class="pub-category">
+                <h2>Standardization</h2>
+                <div class="pub-item">
+                    <div class="pub-title">ISO/IEC DIS 27090: Cybersecurity — Artificial Intelligence — Guidance for addressing security threats to artificial intelligence systems</div>
+                    <div class="pub-venue">Contribution accepted in the final document (via the COBALT Project)</div>
+                </div>
+                <div class="pub-item">
+                    <div class="pub-title">ISO/IEC WD 27004: Information technology — Security techniques — Information security management — Monitoring, measurement, analysis, and evaluation</div>
+                    <div class="pub-venue">Contribution accepted in the final document (via the COBALT Project)</div>
+                </div>
+                <div class="pub-item">
+                    <div class="pub-title">Feasibility Study Cybersecurity Certification for AI</div>
+                    <div class="pub-venue">ENISA Thematic Group on Artificial Intelligence (TGAI). Contribution accepted in the final document.</div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Ioannis Koufos</p>
+        </footer>
+    </div>
+</body>
+</html>
