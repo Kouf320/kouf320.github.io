@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern CV | Digital Profile</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Personal Portfolio | Digital Space</title>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:italic&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #121212;
-            --card-bg: #1e1e1e;
-            --accent-orange: #ff6600;
-            --text-main: #e0e0e0;
-            --text-dim: #a0a0a0;
-            --border-glow: rgba(255, 102, 0, 0.3);
+            --bg-color: #1a1c1e; /* Deep Charcoal */
+            --opal-orange: #eebf91; /* Soft Opal Orange */
+            --text-primary: #f0f0f0;
+            --text-secondary: #adb5bd;
+            --card-bg: #25282c;
+            --transition: all 0.3s ease;
         }
 
         * {
@@ -23,163 +23,177 @@
 
         body {
             background-color: var(--bg-color);
-            color: var(--text-main);
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            padding: 40px 20px;
+            color: var(--text-primary);
+            font-family: 'Outfit', sans-serif;
+            line-height: 1.7;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
         }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
+        .wrapper {
+            max-width: 800px;
+            width: 100%;
+            padding: 60px 20px;
         }
 
+        /* Navigation */
+        nav {
+            margin-bottom: 50px;
+            display: flex;
+            gap: 30px;
+            border-bottom: 1px solid rgba(238, 191, 145, 0.2);
+            padding-bottom: 10px;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: var(--transition);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--opal-orange);
+        }
+
+        /* Branding */
         header {
-            text-align: center;
             margin-bottom: 60px;
-            border-bottom: 2px solid var(--accent-orange);
-            padding-bottom: 20px;
         }
 
         h1 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.5rem;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            color: var(--accent-orange);
+            font-family: 'Libre+Baskerville', serif;
+            font-size: 2.8rem;
+            font-style: italic;
+            font-weight: 400;
+            margin-bottom: 10px;
+            color: var(--opal-orange);
         }
 
-        .subtitle {
-            color: var(--text-dim);
-            letter-spacing: 2px;
-            font-weight: 300;
+        .bio-short {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 500px;
         }
 
-        .grid-layout {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 30px;
+        /* Content Sections */
+        .content-section {
+            display: none;
+            animation: fadeIn 0.6s ease;
         }
 
-        section {
-            background: var(--card-bg);
-            padding: 25px;
-            border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            margin-bottom: 30px;
-            position: relative;
+        .content-section.active {
+            display: block;
         }
 
-        section::before {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; width: 3px; height: 100%;
-            background: var(--accent-orange);
-            box-shadow: 0 0 10px var(--accent-orange);
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         h2 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            color: var(--accent-orange);
-            display: flex;
-            align-items: center;
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            border-left: 3px solid var(--opal-orange);
+            padding-left: 15px;
         }
 
-        .skill-tag {
-            display: inline-block;
-            background: rgba(255, 102, 0, 0.1);
-            color: var(--accent-orange);
-            padding: 5px 12px;
+        /* CV Specific Styling */
+        .cv-item {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: var(--card-bg);
             border-radius: 4px;
-            margin: 5px;
+        }
+
+        .cv-meta {
+            color: var(--opal-orange);
             font-size: 0.85rem;
-            border: 1px solid var(--accent-orange);
-        }
-
-        .job {
-            margin-bottom: 20px;
-        }
-
-        .job-title {
             font-weight: 600;
-            color: #fff;
         }
 
-        .date {
+        .cv-title {
+            font-size: 1.2rem;
+            margin: 5px 0;
+        }
+
+        .footer {
+            margin-top: 80px;
             font-size: 0.8rem;
-            color: var(--accent-orange);
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        footer {
+            color: var(--text-secondary);
             text-align: center;
-            margin-top: 50px;
-            font-size: 0.8rem;
-            color: var(--text-dim);
         }
 
-        @media (max-width: 768px) {
-            .grid-layout { grid-template-columns: 1fr; }
-        }
     </style>
 </head>
 <body>
 
-    <div class="container">
+    <div class="wrapper">
+        <nav>
+            <a href="#" onclick="showSection('home')" class="nav-link active" id="link-home">Home</a>
+            <a href="#" onclick="showSection('cv')" class="nav-link" id="link-cv">Experience</a>
+            <a href="#" onclick="showSection('contact')" class="nav-link" id="link-contact">Contact</a>
+        </nav>
+
         <header>
             <h1>Alex Mercer</h1>
-            <p class="subtitle">Systems Architect // Cyber Security Specialist</p>
+            <p class="bio-short">A designer and developer exploring the intersection of digital craft and human connection.</p>
         </header>
 
-        <div class="grid-layout">
-            <div class="sidebar">
-                <section>
-                    <h2>Contact</h2>
-                    <p><strong>Email:</strong> alex.mercer@futuremail.io</p>
-                    <p><strong>Loc:</strong> Neo-Tokyo Cluster</p>
-                    <p><strong>Web:</strong> amercer.dev</p>
-                </section>
+        <main id="home" class="content-section active">
+            <h2>Current Focus</h2>
+            <p>I spend my time building intuitive interfaces and writing about the evolution of the web. Currently based in Athens, working on decentralised design systems.</p>
+            <br>
+            <p>In this space, I share my thoughts, project logs, and various digital experiments. I believe in minimalism, accessibility, and the beauty of opal-toned aesthetics.</p>
+        </main>
 
-                <section>
-                    <h2>Tech Stack</h2>
-                    <span class="skill-tag">Rust</span>
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">AWS Cloud</span>
-                    <span class="skill-tag">Next.js</span>
-                    <span class="skill-tag">Cyber Ops</span>
-                </section>
+        <main id="cv" class="content-section">
+            <h2>Professional Journey</h2>
+            
+            <div class="cv-item">
+                <span class="cv-meta">2023 — Present</span>
+                <p class="cv-title">Senior Product Designer</p>
+                <p style="color: var(--text-secondary);">Leading the creative direction for next-gen user interfaces and design systems.</p>
             </div>
 
-            <div class="main">
-                <section>
-                    <h2>Mission Objective</h2>
-                    <p>Dedicated to building resilient, decentralized infrastructures. Focused on bridging the gap between legacy hardware and futuristic software protocols.</p>
-                </section>
-
-                <section>
-                    <h2>Experience</h2>
-                    <div class="job">
-                        <span class="date">2023 - PRESENT</span>
-                        <p class="job-title">Senior Security Architect | Cyberdyne Systems</p>
-                        <p>Leading the development of automated threat detection and response protocols for distributed networks.</p>
-                    </div>
-                    <div class="job">
-                        <span class="date">2020 - 2023</span>
-                        <p class="job-title">Full Stack Engineer | Nexus Corp</p>
-                        <p>Optimized data processing pipelines, reducing latency by 40% across global server clusters.</p>
-                    </div>
-                </section>
+            <div class="cv-item">
+                <span class="cv-meta">2020 — 2023</span>
+                <p class="cv-title">Frontend Developer</p>
+                <p style="color: var(--text-secondary);">Specialized in React-based architectures and performance optimization.</p>
             </div>
-        </div>
+        </main>
 
-        <footer>
-            <p>&copy; 2026 Designed for the Future Interface</p>
+        <main id="contact" class="content-section">
+            <h2>Get in Touch</h2>
+            <p>If you'd like to collaborate or just say hello, feel free to reach out via email.</p>
+            <p style="margin-top: 20px;">
+                <a href="mailto:hello@alexmercer.com" style="color: var(--opal-orange); text-decoration: none; border-bottom: 1px solid;">hello@alexmercer.com</a>
+            </p>
+        </main>
+
+        <footer class="footer">
+            &copy; 2026 — Crafted with Opal & Charcoal
         </footer>
     </div>
 
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            // Remove active class from links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+            document.getElementById('link-' + sectionId).classList.add('active');
+        }
+    </script>
 </body>
 </html>
