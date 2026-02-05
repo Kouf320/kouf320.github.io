@@ -3,115 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ioannis Koufos | Cybersecurity and Artificial Intelligence Researcher</title>
+    <title>Yannis Koufos | Cybersecurity and Artificial Intelligence Researcher</title>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:italic&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-color: #1a1c1e; 
-            --opal-orange: #eebf91; 
-            --text-primary: #f0f0f0;
-            --text-secondary: #adb5bd;
-            --card-bg: #25282c;
-            --transition: all 0.3s ease;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-primary);
-            font-family: 'Outfit', sans-serif;
-            line-height: 1.7;
-            display: flex;
-            justify-content: center;
-            min-height: 100vh;
-        }
-
-        .wrapper { max-width: 850px; width: 100%; padding: 60px 20px; }
-
-        nav {
-            margin-bottom: 50px;
-            display: flex;
-            gap: 30px;
-            border-bottom: 1px solid rgba(238, 191, 145, 0.2);
-            padding-bottom: 15px;
-        }
-
-        nav a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        nav a:hover, nav a.active { color: var(--opal-orange); }
-
-        header { margin-bottom: 60px; }
-
-        h1 {
-            font-family: 'Libre Baskerville', serif;
-            font-size: 2.8rem;
-            font-style: italic;
-            font-weight: 400;
-            color: var(--opal-orange);
-            margin-bottom: 10px;
-        }
-
-        .subtitle { color: var(--text-secondary); font-size: 1.1rem; }
-
-        .content-section { display: none; animation: fadeIn 0.6s ease; }
-        .content-section.active { display: block; }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            margin: 40px 0 25px 0;
-            border-left: 3px solid var(--opal-orange);
-            padding-left: 15px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .cv-item {
-            margin-bottom: 30px;
-            padding: 25px;
-            background: var(--card-bg);
-            border-radius: 6px;
-            border: 1px solid rgba(255,255,255,0.03);
-        }
-
-        .cv-meta { color: var(--opal-orange); font-size: 0.85rem; font-weight: 600; }
-        .cv-title { font-size: 1.2rem; margin: 5px 0; font-weight: 600; }
-        .cv-org { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 10px; }
-
-        .tag-container { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
-        .tag {
-            background: rgba(238, 191, 145, 0.1);
-            color: var(--opal-orange);
-            padding: 4px 12px;
-            font-size: 0.8rem;
-            border-radius: 4px;
-            border: 1px solid rgba(238, 191, 145, 0.3);
-        }
-
-        footer {
-            margin-top: 80px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-            text-align: center;
-        }
-
-        a.contact-link { color: var(--opal-orange); text-decoration: none; border-bottom: 1px solid; }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -119,12 +14,17 @@
         <nav>
             <a onclick="showSection('home')" class="nav-link active" id="link-home">About</a>
             <a onclick="showSection('cv')" class="nav-link" id="link-cv">Experience</a>
-            <a onclick="showSection('research')" class="nav-link" id="link-research">Research</a>
+            <a href="publications.html" class="nav-link">Publications</a>
         </nav>
 
         <header>
-            <h1>Ioannis Koufos</h1>
+            <h1>Yannis Koufos</h1>
             <p class="subtitle">Cybersecurity & Artificial Intelligence Researcher</p>
+            <div class="contact-links">
+                <a href="https://github.com/kouf320" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://scholar.google.com/citations?user=ZR_-mwwAAAAJ" target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+                <!-- Add more links here (e.g., LinkedIn, Email) -->
+            </div>
         </header>
 
         <main id="home" class="content-section active">
@@ -184,13 +84,8 @@
             </div>
         </main>
 
-        <main id="research" class="content-section">
-            <h2>Publications & Research</h2>
-            <p>You can find a comprehensive list of my publications, including journal papers, conference proceedings, and book chapters, on my <a href="publications.html" class="contact-link">Publications Page</a>.</p>
-        </main>
-
         <footer>
-            <p>&copy; 2026 Ioannis Koufos</p>
+            <p>&copy; 2026 Yannis Koufos</p>
         </footer>
     </div>
 
@@ -198,9 +93,27 @@
         function showSection(sectionId) {
             document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active'));
             document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
-            document.getElementById(sectionId).classList.add('active');
-            document.getElementById('link-' + sectionId).classList.add('active');
+            
+            const content = document.getElementById(sectionId);
+            const link = document.getElementById('link-' + sectionId);
+            
+            if (content) content.classList.add('active');
+            if (link) link.classList.add('active');
+            
+            // Update URL hash without scrolling
+            history.pushState(null, null, '#' + sectionId);
         }
+
+        // Handle initial hash
+        window.addEventListener('load', () => {
+            const hash = window.location.hash.substring(1);
+            if (hash === 'cv') {
+                showSection('cv');
+            } else {
+                // Default to home
+                showSection('home');
+            }
+        });
     </script>
 </body>
 </html>
