@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern CV | Digital Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --accent-orange: #ff6600;
+            --text-main: #e0e0e0;
+            --text-dim: #a0a0a0;
+            --border-glow: rgba(255, 102, 0, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            border-bottom: 2px solid var(--accent-orange);
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--accent-orange);
+        }
+
+        .subtitle {
+            color: var(--text-dim);
+            letter-spacing: 2px;
+            font-weight: 300;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
+        }
+
+        section {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        section::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 3px; height: 100%;
+            background: var(--accent-orange);
+            box-shadow: 0 0 10px var(--accent-orange);
+        }
+
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--accent-orange);
+            display: flex;
+            align-items: center;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            background: rgba(255, 102, 0, 0.1);
+            color: var(--accent-orange);
+            padding: 5px 12px;
+            border-radius: 4px;
+            margin: 5px;
+            font-size: 0.85rem;
+            border: 1px solid var(--accent-orange);
+        }
+
+        .job {
+            margin-bottom: 20px;
+        }
+
+        .job-title {
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .date {
+            font-size: 0.8rem;
+            color: var(--accent-orange);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.8rem;
+            color: var(--text-dim);
+        }
+
+        @media (max-width: 768px) {
+            .grid-layout { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Alex Mercer</h1>
+            <p class="subtitle">Systems Architect // Cyber Security Specialist</p>
+        </header>
+
+        <div class="grid-layout">
+            <div class="sidebar">
+                <section>
+                    <h2>Contact</h2>
+                    <p><strong>Email:</strong> alex.mercer@futuremail.io</p>
+                    <p><strong>Loc:</strong> Neo-Tokyo Cluster</p>
+                    <p><strong>Web:</strong> amercer.dev</p>
+                </section>
+
+                <section>
+                    <h2>Tech Stack</h2>
+                    <span class="skill-tag">Rust</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">AWS Cloud</span>
+                    <span class="skill-tag">Next.js</span>
+                    <span class="skill-tag">Cyber Ops</span>
+                </section>
+            </div>
+
+            <div class="main">
+                <section>
+                    <h2>Mission Objective</h2>
+                    <p>Dedicated to building resilient, decentralized infrastructures. Focused on bridging the gap between legacy hardware and futuristic software protocols.</p>
+                </section>
+
+                <section>
+                    <h2>Experience</h2>
+                    <div class="job">
+                        <span class="date">2023 - PRESENT</span>
+                        <p class="job-title">Senior Security Architect | Cyberdyne Systems</p>
+                        <p>Leading the development of automated threat detection and response protocols for distributed networks.</p>
+                    </div>
+                    <div class="job">
+                        <span class="date">2020 - 2023</span>
+                        <p class="job-title">Full Stack Engineer | Nexus Corp</p>
+                        <p>Optimized data processing pipelines, reducing latency by 40% across global server clusters.</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Designed for the Future Interface</p>
+        </footer>
+    </div>
+
+</body>
+</html>
